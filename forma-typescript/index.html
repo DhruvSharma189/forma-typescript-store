@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive product storefront powered by the DummyJSON public API.">
+  <title>FORMA — Everyday Objects</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+<div class="topbar"><span>THE EVERYDAY EDIT</span> &nbsp; Thoughtful finds for your everyday life</div>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="Forma home">FORMA<span class="brand-mark"></span></a>
+      <span class="nav-note">Objects with a little more thought.</span>
+      <div class="nav-right"><button class="cart-pill" id="cartButton" aria-label="Shopping cart">BAG (<span id="cartCount">0</span>)</button></div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Curated collection / 001</div>
+        <h1>Good things.<br><em>Every single day.</em></h1>
+        <div class="hero-stats">
+          <div class="stat"><strong>01—∞</strong><small>Everyday essentials</small></div>
+          <div class="stat"><strong>Easy</strong><small>Find your next favourite</small></div>
+        </div>
+      </div>
+      <p class="hero-copy">A considered collection of little upgrades for your daily routine. Explore the edit, find something you love, and make it yours.</p>
+    </section>
+    <section class="catalog" aria-labelledby="collection-title">
+      <div class="toolbar">
+        <label class="search-wrap"><span class="search-icon" aria-hidden="true">⌕</span><input class="search" id="searchInput" type="search" placeholder="Search products..." aria-label="Search products"></label>
+        <select class="select" id="categorySelect" aria-label="Filter by category"><option value="">All categories</option></select>
+        <select class="select" id="sortSelect" aria-label="Sort products">
+          <option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="rating">Top rated</option><option value="name">Name: A–Z</option>
+        </select>
+        <span class="results-count" id="resultsCount">Loading collection…</span>
+      </div>
+      <div class="section-heading"><h2 id="collection-title">The collection</h2><p>Useful things, well considered.</p></div>
+      <div class="product-grid" id="productGrid" aria-live="polite">
+        <div class="state"><div class="spinner"></div>Finding the good stuff…</div>
+      </div>
+      <div class="load-more-wrap"><button class="load-more" id="loadMore" hidden>Load more products &nbsp; ↗</button></div>
+    </section>
+  </main>
+  <footer><span>© 2026 FORMA — A front-end practice project.</span><span>Product data provided by DummyJSON · Demo prices and stock only.</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
